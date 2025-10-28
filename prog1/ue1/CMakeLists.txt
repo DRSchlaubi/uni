@@ -1,0 +1,5 @@
+add_executable(ue1_blatt1_1 ue1/blatt1_1.c)
+add_executable(ue1_blatt1_2 ue1/blatt1_2.c)
+add_executable(ue1_blatt1_3 ue1/blatt1_3.c)
+add_executable(ue1_blatt1_4 ue1/blatt1_4.c)
+add_executable(ue1_blatt1_5 ue1/blatt1_5.c)

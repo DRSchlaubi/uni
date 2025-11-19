@@ -1,0 +1,5 @@
+add_executable(week5_ue1 blatt5_1.c)
+add_executable(week5_ue2 blatt5_2.c)
+add_executable(week5_ue3 blatt5_3.c shared.c)
+add_executable(week5_ue4 blatt5_4.c shared.c)
+add_executable(week5_ue5 blatt5_5.c)

@@ -1,0 +1,3 @@
+aeiou
+AEEIOU
+bcdfg

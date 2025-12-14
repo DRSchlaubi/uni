@@ -37,9 +37,9 @@ int main(const int argc, char *argv[]) {
         return 1;
     }
 
-    const char *day_str = argv[3];
+    const char *day_str = argv[1];
     const char *month_str = argv[2];
-    const char *year_str = argv[1];
+    const char *year_str = argv[3];
 
 
     const long int day = strtol(day_str, NULL, 10);
@@ -58,12 +58,12 @@ int main(const int argc, char *argv[]) {
         return 1;
     }
 
-    printf("%04li-%02li-%02li\n", year, month, day);
 
     if (year >= 2026) {
         printf("Das Datum liegt in der Zukunft!\n");
         return 1;
     }
 
+    printf("%04li-%02li-%02li\n", year, month, day);
     return 0;
 }

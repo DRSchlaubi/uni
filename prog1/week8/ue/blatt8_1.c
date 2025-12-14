@@ -14,8 +14,9 @@ int main() {
     int max = INT_MIN;
     bool failed = false;
     while (!feof(input)) {
-        int tmp ;
+        int tmp;
         const int read = fscanf_s(input, "%d", &tmp);
+        printf("Read number: %d\n", tmp);
         if (read <= 0) {
             failed = true;
             break;

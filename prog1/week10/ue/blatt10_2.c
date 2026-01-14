@@ -42,7 +42,7 @@ int main() {
     int arr[n];
     srand(time(NULL)); // NOLINT(*-msc51-cpp)
     for (int i = 0; i < n; i++) {
-        int random = rand() % 1000 + 1;
+        int random = rand() % 1000 + 1; // NOLINT(*-msc50-cpp)
         arr[i] = random;
     }
     for (int i = 0; i < n; i++) {

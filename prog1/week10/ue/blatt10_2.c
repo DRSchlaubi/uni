@@ -10,7 +10,7 @@ int sum(const int *arr, const int len) {
     return sum;
 }
 
-int min(const int *arr, const int len) {
+int min_arr(const int *arr, const int len) {
     int min = INT_MAX;
     for (int i = 0; i < len; i++) {
         int element = arr[i];
@@ -19,7 +19,7 @@ int min(const int *arr, const int len) {
     return min;
 }
 
-int max(const int *arr, const int len) {
+int max_arr(const int *arr, const int len) {
     int max = INT_MIN;
     for (int i = 0; i < len; i++) {
         int element = arr[i];
@@ -34,12 +34,14 @@ double average(const int *arr, const int len) {
 }
 
 int main() {
-
     printf("Bitti bitti Anzahl: \n");
     int n;
     scanf_s("%d", &n);
 
-    int arr[n];
+    int *arr = malloc(n * sizeof(int));
+    if (arr == NULL) {
+        return 1;
+    }
     srand(time(NULL)); // NOLINT(*-msc51-cpp)
     for (int i = 0; i < n; i++) {
         int random = rand() % 1000 + 1; // NOLINT(*-msc50-cpp)
@@ -51,7 +53,9 @@ int main() {
     printf("\n");
 
     printf("Summe: %d\n", sum(arr, n));
-    printf("Minimum: %d\n", min(arr, n));
-    printf("Maximum: %d\n", max(arr, n));
+    printf("Minimum: %d\n", min_arr(arr, n));
+    printf("Maximum: %d\n", max_arr(arr, n));
     printf("Durchschnitt: %.2f\n", average(arr, n));
+
+    free(arr);
 }

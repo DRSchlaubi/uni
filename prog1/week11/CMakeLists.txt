@@ -1,0 +1,3 @@
+add_subdirectory(ue)
+
+add_compile_definitions(_CRT_SECURE_NO_WARNINGS)
